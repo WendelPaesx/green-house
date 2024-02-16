@@ -5,11 +5,11 @@ export default function AssinarNewsLetter() {
   return (
     <Box display="flex" alignItems="center" position="relative">
       <Box
-        width="785px"
-        height="462px"
+        width="90%"
+        height="60%"
         position="absolute"
-        top="210px"
-        left="8em"
+        top="25%"
+        left="10%"
         zIndex={2}
       >
         <div style={{fontFamily: 'Noto serf, roboto'}}>
@@ -70,8 +70,10 @@ export default function AssinarNewsLetter() {
           marginLeft: "auto",
           position: "relative",
           zIndex: 1,
-          right: "50vh",
-          height: "125vh",
+          right: "30%",
+          
+          
+        
         }}
       />
       <img
@@ -81,7 +83,7 @@ export default function AssinarNewsLetter() {
           position: "absolute",
           zIndex: 0,
           top: 0,
-          height: "80vh",
+          height: "80%",
           right: 0,
           margin: 0,
           padding: 0,
