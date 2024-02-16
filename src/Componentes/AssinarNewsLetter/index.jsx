@@ -8,6 +8,7 @@ const StyledBox = styled(Box)`
   align-items: center;
   
   
+  
 `;
 
 const ContentBox = styled(Box)`
@@ -33,7 +34,7 @@ const BackgroundImage = styled.img`
 const LogoImage = styled.img`
   position: absolute;
   z-index: 1;
-  right: 30%;
+  right: 25%;
   top:10%;
 `;
 
@@ -53,13 +54,14 @@ export default function AssinarNewsLetter() {
             color: "black",
             fontSize: "1.9em",
             lineHeight: "0",
+            
           }}
         >
           Sua casa com as
           <Typography
             variant="h1"
             component="h1"
-            sx={{ color: "black", fontSize: "4em", lineHeight: "1.3" }}
+            sx={{ color: "black", fontSize: "4em", lineHeight: "1.3",  }}
           >
             Melhores plantas
           </Typography>
