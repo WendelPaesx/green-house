@@ -45,7 +45,7 @@ const MenuComponent = () => {
               <StyledIconButton
                 size="large"
                 edge="start"
-                color="inherit"
+                color="success"
                 aria-label="menu"
                 sx={{ ml: 2 }}
                 onClick={handleClick}
@@ -68,31 +68,31 @@ const MenuComponent = () => {
           {!isMobile && (
             <>
               <Button
-                style={{ fontSize: "100%", marginRight: "3%" }}
+                style={{ fontSize: "100%", marginRight: "3%", color:'green', fontWeight:'bold' }}
                 color="primary"
               >
                 Como fazer /
               </Button>
               <Button
-                style={{ fontSize: "100%", marginRight: "3%" }}
+                style={{ fontSize: "100%", marginRight: "3%", color:'green', fontWeight:'bold' }}
                 color="primary"
               >
                 Ofertas /
               </Button>
               <Button
-                style={{ fontSize: "100%", marginRight: "3%" }}
+                style={{ fontSize: "100%", marginRight: "3%", color:'green', fontWeight:'bold' }}
                 color="primary"
               >
                 Depoimentos /
               </Button>
               <Button
-                style={{ fontSize: "100%", marginRight: "3%" }}
+                style={{ fontSize: "100%", marginRight: "3%", color:'green', fontWeight:'bold' }}
                 color="primary"
               >
                 Videos /
               </Button>
               <Button
-                style={{ fontSize: "100%", marginRight: "3%" }}
+                style={{ fontSize: "100%", marginRight: "3%", color:'green', fontWeight:'bold' }}
                 color="primary"
               >
                 Meu carrinho
