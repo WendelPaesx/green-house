@@ -1,94 +1,106 @@
-import { Box } from "@mui/material";
+import React from "react";
+import styled from "styled-components";
+import { Box, Typography, TextField, Button } from "@mui/material";
 
+const StyledBox = styled(Box)`
+  
+  display: flex;
+  align-items: center;
+  
+  
+`;
+
+const ContentBox = styled(Box)`
+  width:35%;
+  height: 60%;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  z-index: 2;
+  background-color: rgba(245, 245, 245, 0.5);
+  padding: 1em;
+  border-radius: 15px;
+`;
+
+const BackgroundImage = styled.img`
+  position: absolute;
+  z-index: 0;
+  height: 80%;
+  top: 0;
+  right: 0;
+`;
+
+const LogoImage = styled.img`
+  position: absolute;
+  z-index: 1;
+  right: 30%;
+  top:10%;
+`;
 
 export default function AssinarNewsLetter() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(event.target.email.value);
+  };
   return (
-    <Box display="flex" alignItems="center" position="relative">
-      <Box
-        width="90%"
-        height="60%"
-        position="absolute"
-        top="25%"
-        left="10%"
-        zIndex={2}
-      >
-        <div style={{fontFamily: 'Noto serf, roboto'}}>
-          <p style={{ fontSize: "1.7em", lineHeight: "0", color: "#888888" }}>
-            Sua casa com as{" "}
-            <h1 style={{ fontSize: "4em", lineHeight: "1", color: "black" }}>
-              {" "}
-              Melhores plantas
-            </h1>
-          </p>
-          <p style={{ fontSize: "1.5em", lineHeight: "1", color: "#888888" }}>
-            Encontre aqui uma vasta seleção de plantas para decorar a sua casa e
-            torna-lo uma pessoa mais feliz no seu dia a dia.
-          </p>
-          <p style={{ fontSize: "1.5em", lineHeight: "1", color: "#888888" }}>
-            Entre com seu e-mail e assine a nossa newsletter para saber das
-            novidades da marca
-          </p>
+    <StyledBox>
+      <ContentBox>
+        <Typography
+          variant="body1"
+          component="div"
+          sx={{
+            fontFamily: "Noto Serif, Roboto",
+            color: "black",
+            fontSize: "1.9em",
+            lineHeight: "0",
+          }}
+        >
+          Sua casa com as
+          <Typography
+            variant="h1"
+            component="h1"
+            sx={{ color: "black", fontSize: "4em", lineHeight: "1.3" }}
+          >
+            Melhores plantas
+          </Typography>
+        </Typography>
+        
+        <Typography variant="body1" component="p" sx={{ color: 'black', fontSize: '1.5em', lineHeight: '1' }}>
+          Encontre aqui uma vasta seleção de plantas para decorar a sua casa e torná-la um lugar mais feliz no seu dia a dia.
+        </Typography>
+        <Typography variant="body1" component="p" sx={{ color: 'black', fontSize: '1.5em', lineHeight: '1' , marginTop:'1em'}}>
+          Inscreva-se em nossa newsletter para receber novidades sobre a marca.
+        </Typography>
+        
+        
+        <form onSubmit={handleSubmit}>
+          <TextField
+            id="email"
+            name="email"
+            type="email"
+            label="Insira seu e-mail"
+            variant="outlined"
+            fullWidth
+            sx={{ marginBottom: '1em', marginTop:'1em'}}
+          />
+          <Button type="submit" variant="contained" color="warning" sx={{ fontSize: '1em', height: '3em', cursor: 'pointer' }}>
+            Assinar Newsletter
+          </Button>
+        </form>
 
-          <form >
-            
-            <input
-              type="email"
-              id="email"
-              placeholder="insira seu e-mail"
-              style={{
-                height:'2em',
-                fontSize: "2em",
-                padding: "8px",
-                margin: " 0",
-                boxShadow: '1px 5px 6px 1px rgba(0, 0, 0, 0.1)',
-                border: "none",
-                
-              }}
-            />
-            <input
-              type="submit"
-              value="Assinar Newsletter"
-              style={{
-                fontSize: "1em",
-                height: '5em',
-                padding: "8px ",
-                margin: " 0",
-                backgroundColor: "#ffcb47",
-                color: "#fff",
-                border: "none",
-                boxShadow: '1px 4px 6px 1px rgba(0, 0, 0, 0.1)',
-                cursor: "pointer",
-              }}
-            />
-          </form>
-        </div>
-      </Box>
-      <img
+       
+        
+      </ContentBox>
+      <LogoImage
         src="img/imagem-hero1.png"
         alt="Planta"
-        style={{
-          marginLeft: "auto",
-          position: "relative",
-          zIndex: 1,
-          right: "30%",
-          
-          
         
-        }}
       />
-      <img
+      <BackgroundImage
         src="img/Vector.png"
         alt="vector"
-        style={{
-          position: "absolute",
-          zIndex: 0,
-          top: 0,
-          height: "80%",
-          right: 0,
-          margin: 0,
-          padding: 0,
-        }}
+       
       />
-    </Box>
+    </StyledBox>
   );
 }
