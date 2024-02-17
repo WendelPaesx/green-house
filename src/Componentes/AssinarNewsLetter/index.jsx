@@ -21,6 +21,14 @@ const ContentBox = styled(Box)`
   background-color: rgba(245, 245, 245, 0.5);
   padding: 1em;
   border-radius: 15px;
+  @media (max-width: 700px){
+    width:90%
+    left:5%
+    top:50%
+    transform: translateY(-50%)
+    
+  };
+
 `;
 
 const BackgroundImage = styled.img`
@@ -36,6 +44,12 @@ const LogoImage = styled.img`
   z-index: 1;
   right: 25%;
   top:10%;
+  @media (max-width: 700px){
+    width:80%;
+    right:10%
+    top:20%
+
+  }
 `;
 
 export default function AssinarNewsLetter() {
@@ -61,13 +75,13 @@ export default function AssinarNewsLetter() {
           <Typography
             variant="h1"
             component="h1"
-            sx={{ color: "black", fontSize: "4em", lineHeight: "1.3",  }}
+            sx={{ color: "black", fontSize: "10vh", lineHeight: "1.3",  }}
           >
             Melhores plantas
           </Typography>
         </Typography>
         
-        <Typography variant="body1" component="p" sx={{ color: 'black', fontSize: '1.5em', lineHeight: '1' }}>
+        <Typography variant="body1" component="p" sx={{ color: 'black', fontSize: '1.5em', lineHeight: '1' , }}>
           Encontre aqui uma vasta seleção de plantas para decorar a sua casa e torná-la um lugar mais feliz no seu dia a dia.
         </Typography>
         <Typography variant="body1" component="p" sx={{ color: 'black', fontSize: '1.5em', lineHeight: '1' , marginTop:'1em'}}>
