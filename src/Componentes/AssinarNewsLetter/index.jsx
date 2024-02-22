@@ -61,9 +61,7 @@ const ses = new AWS.SES();
 
     //config do aws ses
     AWS.config.update({
-      AWS_ACCESS_KEY_ID:"AKIAYS2NU2UBWINPN34W",
-      AWS_SECRET_ACCESS_KEY:"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",
-      AWS_REGION:"sa-east-1",
+     .env
     });
     
     // Parâmetros do e-mail
